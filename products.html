@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>All Products | PT. Niroga Farma Digitama</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet">
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "primary-fixed": "#dbe1ff",
+                        "surface-container": "#e7eeff",
+                        "secondary-fixed-dim": "#eec140",
+                        "surface-tint": "#2957c2",
+                        "tertiary-container": "#494c4e",
+                        "tertiary": "#323537",
+                        "outline": "#747684",
+                        "on-secondary-fixed-variant": "#594400",
+                        "surface": "#f9f9ff",
+                        "secondary-fixed": "#ffdf93",
+                        "surface-variant": "#d8e3fb",
+                        "on-primary-fixed": "#00184a",
+                        "outline-variant": "#c3c6d5",
+                        "on-secondary-fixed": "#241a00",
+                        "primary-fixed-dim": "#b3c5ff",
+                        "background": "#f9f9ff",
+                        "surface-container-high": "#dee8ff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf1ff",
+                        "error-container": "#ffdad6",
+                        "surface-dim": "#cfdaf2",
+                        "surface-container-highest": "#d8e3fb",
+                        "surface-bright": "#f9f9ff",
+                        "secondary-container": "#fecf4d",
+                        "on-secondary-container": "#725800",
+                        "secondary": "#765b00",
+                        "on-surface": "#111c2d",
+                        "error": "#ba1a1a",
+                        "on-primary": "#ffffff",
+                        "inverse-primary": "#b3c5ff",
+                        "on-primary-container": "#a4baff",
+                        "inverse-surface": "#263143",
+                        "primary-container": "#0443ae",
+                        "surface-container-low": "#f0f3ff",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed": "#e0e3e5",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-tertiary-container": "#babcbe",
+                        "on-primary-fixed-variant": "#003ea6",
+                        "primary": "#002e7f",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-error": "#ffffff",
+                        "on-background": "#111c2d",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#434653"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "sm": "16px",
+                        "container-max": "1280px",
+                        "xs": "8px",
+                        "xl": "80px",
+                        "lg": "48px",
+                        "base": "4px",
+                        "gutter": "24px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .product-card-shadow {
+            box-shadow: 0 4px 10px rgba(30, 41, 59, 0.05);
+        }
+
+        .product-card-shadow:hover {
+            box-shadow: 0 10px 20px rgba(30, 41, 59, 0.1);
+        }
+    </style>
+</head>
+
+<body class="bg-surface-container-lowest font-body-md text-on-surface overflow-x-hidden">
+    <!-- Top Navigation Bar -->
+    <header
+        class="sticky top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm relative">
+        <div class="flex justify-between items-center h-16 md:h-20 max-w-container-max mx-auto px-md md:px-lg gap-lg">
+            <div class="text-headline-md font-headline-md font-bold text-primary">
+                NIRFAMA
+            </div>
+            <!-- Desktop Search Bar -->
+            <div
+                class="hidden md:flex flex-1 items-center bg-surface-container-low px-sm py-xs rounded-full border border-outline-variant max-w-md ml-lg">
+                <span class="material-symbols-outlined text-on-surface-variant mr-xs text-sm">search</span>
+                <input id="searchInput"
+                    class="bg-transparent border-none focus:ring-0 outline-none w-full text-body-sm text-on-surface search-input-class"
+                    placeholder="Cari produk..." type="text">
+            </div>
+            <nav class="hidden md:flex items-center space-x-lg">
+                <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200"
+                    href="index.html">Home</a>
+                <a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-200"
+                    href="products.html">Products</a>
+                <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200"
+                    href="about.html">Tentang Kami</a>
+                <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200"
+                    href="career.html">Karir</a>
+            </nav>
+            <div class="flex items-center gap-sm">
+                <button
+                    class="hidden sm:flex items-center gap-xs text-black px-md py-xs rounded-full text-sm font-label-md hover:opacity-90 transition-all active:scale-95"
+                    style="background-color: #25D366;">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                        <path
+                            d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                    </svg>
+                    Hubungi CS
+                </button>
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn"
+                    class="md:hidden p-xs text-primary hover:bg-surface-variant rounded-full transition-all">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Search Bar -->
+        <div class="md:hidden px-md pb-sm">
+            <div
+                class="flex items-center bg-surface-container-low px-sm py-xs rounded-full border border-outline-variant w-full">
+                <span class="material-symbols-outlined text-on-surface-variant mr-xs text-sm">search</span>
+                <input id="mobileSearchInput"
+                    class="bg-transparent border-none focus:ring-0 outline-none w-full text-body-sm text-on-surface search-input-class"
+                    placeholder="Cari produk..." type="text">
+            </div>
+        </div>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu"
+            class="hidden md:hidden absolute left-0 w-full bg-surface-container-lowest border-b border-outline-variant shadow-lg flex-col px-md py-sm z-50 top-full">
+            <a class="text-on-surface-variant font-label-md py-3 border-b border-outline-variant/30 hover:text-primary transition-colors"
+                href="index.html">Home</a>
+            <a class="text-primary font-bold py-3 border-b border-outline-variant/30" href="products.html">Products</a>
+            <a class="text-on-surface-variant font-label-md py-3 border-b border-outline-variant/30 hover:text-primary transition-colors"
+                href="about.html">Tentang Kami</a>
+            <a class="text-on-surface-variant font-label-md py-3 border-b border-outline-variant/30 hover:text-primary transition-colors"
+                href="career.html">Karir</a>
+            <button
+                class="flex items-center justify-center gap-xs text-black px-md py-sm rounded-full text-sm font-label-md mt-sm active:scale-95 transition-all"
+                style="background-color: #25D366;">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="w-4 h-4 fill-current">
+                    <path
+                        d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157.1zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
+                </svg>
+                Hubungi CS
+            </button>
+        </div>
+    </header>
+    <div class="max-w-container-max mx-auto flex flex-col md:flex-row min-h-screen">
+        <!-- SideNavBar / Mobile Top Categories -->
+        <aside
+            class="w-full md:w-64 flex-none flex flex-col gap-xs p-md md:h-screen md:sticky top-[120px] md:top-20 bg-surface-container-lowest md:bg-surface-container-low border-b md:border-b-0 md:border-r border-outline-variant/30 md:shadow-sm z-40">
+            <div class="mb-sm md:mb-lg hidden md:block">
+                <h2 class="font-headline-md text-headline-md text-primary">Kategori</h2>
+                <p class="text-body-sm text-on-surface-variant">Filter kategori</p>
+            </div>
+            <nav id="categoryNav"
+                class="flex flex-row md:flex-col gap-2 md:gap-base overflow-x-auto md:overflow-visible pb-2 md:pb-0 scrollbar-hide"
+                style="scrollbar-width: none; -ms-overflow-style: none;">
+                <a class="flex-none flex items-center gap-sm px-3 py-1.5 md:px-md md:py-sm bg-secondary-container text-on-secondary-container rounded-full font-bold transition-transform active:scale-95 duration-150 whitespace-nowrap"
+                    href="#">
+                    <span class="material-symbols-outlined hidden md:block"
+                        style="font-variation-settings: &quot;FILL&quot; 1;">grid_view</span>
+                    <span class="font-label-md text-[13px] md:text-label-md">All Products</span>
+                </a>
+                <a class="flex-none flex items-center gap-sm px-3 py-1.5 md:px-md md:py-sm text-on-surface-variant hover:bg-surface-variant rounded-full transition-all active:scale-95 whitespace-nowrap"
+                    href="#">
+                    <span class="material-symbols-outlined hidden md:block">Grocery</span>
+                    <span class="font-label-md text-[13px] md:text-label-md">Susu</span>
+                </a>
+                <a class="flex-none flex items-center gap-sm px-3 py-1.5 md:px-md md:py-sm text-on-surface-variant hover:bg-surface-variant rounded-full transition-all active:scale-95 whitespace-nowrap"
+                    href="#">
+                    <span class="material-symbols-outlined hidden md:block">potted_plant</span>
+                    <span class="font-label-md text-[13px] md:text-label-md">Pupuk KCL</span>
+                </a>
+                <a class="flex-none flex items-center gap-sm px-3 py-1.5 md:px-md md:py-sm text-on-surface-variant hover:bg-surface-variant rounded-full transition-all active:scale-95 whitespace-nowrap"
+                    href="#">
+                    <span class="material-symbols-outlined hidden md:block">science</span>
+                    <span class="font-label-md text-[13px] md:text-label-md">Pupuk Kalsium</span>
+                </a>
+                <a class="flex-none flex items-center gap-sm px-3 py-1.5 md:px-md md:py-sm text-on-surface-variant hover:bg-surface-variant rounded-full transition-all active:scale-95 whitespace-nowrap"
+                    href="#">
+                    <span class="material-symbols-outlined hidden md:block">opacity</span>
+                    <span class="font-label-md text-[13px] md:text-label-md">Perekat</span>
+                </a>
+                <a class="flex-none flex items-center gap-sm px-3 py-1.5 md:px-md md:py-sm text-on-surface-variant hover:bg-surface-variant rounded-full transition-all active:scale-95 whitespace-nowrap"
+                    href="#">
+                    <span class="material-symbols-outlined hidden md:block">eco</span>
+                    <span class="font-label-md text-[13px] md:text-label-md">Asam Amino & Humat</span>
+                </a>
+            </nav>
+        </aside>
+        <!-- Main Content Area -->
+        <main class="flex-1 p-4 md:p-gutter bg-surface-container-lowest">
+            <!-- Page Header -->
+            <div class="flex justify-between items-end mb-6 md:mb-xl">
+                <div>
+                    <h1
+                        class="font-headline-md md:font-headline-lg text-[28px] md:text-headline-lg text-primary mb-1 md:mb-xs">
+                        Katalog Produk</h1>
+                    <p class="text-body-sm md:text-body-lg text-on-surface-variant max-w-2xl">Temukan produk-produk
+                        terbaik dan
+                        berkualitas dari kami.</p>
+                </div>
+            </div>
+            <!-- Products Grid -->
+            <div id="productGrid"
+                class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-xs sm:gap-sm">
+                <!-- Product 1 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            data-alt="etafit." src="images/product/etafit/etafit.avif">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Etafit</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Susu</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <!-- Product 2 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/etafit/etafit_gold.avif" alt="etafit gold">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Etafit Gold</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Susu</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <!-- Product 3 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/manohara_premium.avif" alt="manohara premium">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Manohara Premium</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <!-- Product 4 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/permata.avif" alt="permata">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Permata</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">KCL</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/dewa_dewi.avif" alt="dewa-dewi">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            DEWA-DEWI </h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">KCL</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <!-- Product 6 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/mano_mano.avif" alt="mano mano">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Mano Mano</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">KCL</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <!--Product 7-->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/tridi_stick.avif" alt="tridi stick">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Tridi Stick</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/safiraa.avif" alt="safiraa">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Safiraa</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 9 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/mila_stick.avif" alt="mila stick">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Mila Stick</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 10 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/regge_stick.avif" alt="regge stick">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Regge Stick</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 11 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/new_rekat.avif" alt="new rekat">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            New Rekat</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 12 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/you_stick.avif" alt="you stick">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            You Stick</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 13 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/super_stick.avif" alt="super stick">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Super Stick</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 14 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/djitoe.avif" alt="djitoe">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Djitoe</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 15 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/astron.avif" alt="astron">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Astron</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 16 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/mano_sari_merah.avif" alt="mano sari merah">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Mano Sari Merah</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 17 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/liontin_premium.avif" alt="liontin stick">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Liontin Stick</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 18 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/manosari_npk.avif" alt="mano sari npk">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Mano Sari NPK</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 19 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/liontin_npk.avif" alt="liontin npk">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Liontin NPK</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 20 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/super_soil.avif" alt="super soil">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Super Soil</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Asam
+                            Amino & Humat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 21 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/mano_stick.avif" alt="mano stick">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Mano Stick</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 22 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/windaa.avif" alt="windaa">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Windaa</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 23 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/inti_grow.avif" alt="inti grow">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Inti Grow</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 24 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/manohara_mesh.avif" alt="manohara mesh">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Manohara Mesh</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 25 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/99.avif" alt="99">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            99</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <!-- Product 26 -->
+                <div
+                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/mano_calbor.avif" alt="99">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            99</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInputs = document.querySelectorAll('.search-input-class');
+            const categoryNav = document.getElementById('categoryNav');
+            const productGrid = document.getElementById('productGrid');
+            const products = Array.from(productGrid.children);
+            const categoryLinks = Array.from(categoryNav.querySelectorAll('a'));
+
+            let currentCategory = 'All Products';
+            let searchQuery = '';
+
+            function filterProducts() {
+                products.forEach(product => {
+                    const titleElement = product.querySelector('h3');
+                    // Find the category span which typically has these classes
+                    const categoryElement = product.querySelector('span.bg-primary-fixed');
+
+                    if (!titleElement || !categoryElement) return;
+
+                    const title = titleElement.textContent.replace(/\s+/g, ' ').trim().toLowerCase();
+                    const category = categoryElement.textContent.replace(/\s+/g, ' ').trim().toLowerCase();
+                    const navCategory = currentCategory.replace(/\s+/g, ' ').trim().toLowerCase();
+
+                    const matchesSearch = title.includes(searchQuery);
+
+                    // Check if category matches (e.g. "Pupuk KCL" includes "KCL" or vice versa)
+                    const matchesCategory = navCategory === 'all products' ||
+                        navCategory.includes(category) ||
+                        category.includes(navCategory);
+
+                    if (matchesSearch && matchesCategory) {
+                        product.style.display = 'flex';
+                    } else {
+                        product.style.display = 'none';
+                    }
+                });
+            }
+
+            // Sync both search inputs and filter
+            searchInputs.forEach(input => {
+                input.addEventListener('input', (e) => {
+                    searchQuery = e.target.value.toLowerCase();
+
+                    // Sync the other input if exists
+                    searchInputs.forEach(otherInput => {
+                        if (otherInput !== input) {
+                            otherInput.value = e.target.value;
+                        }
+                    });
+
+                    filterProducts();
+                });
+            });
+
+            // Category click event
+            categoryLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    // Reset styling for all links
+                    categoryLinks.forEach(l => {
+                        l.classList.remove('bg-secondary-container', 'text-on-secondary-container', 'font-bold');
+                        l.classList.add('text-on-surface-variant', 'hover:bg-surface-variant');
+
+                        // Reset fill for icons if present
+                        const icon = l.querySelector('.material-symbols-outlined');
+                        if (icon) icon.style.fontVariationSettings = '';
+                    });
+
+                    // Apply active styling to clicked link
+                    link.classList.remove('text-on-surface-variant', 'hover:bg-surface-variant');
+                    link.classList.add('bg-secondary-container', 'text-on-secondary-container', 'font-bold');
+
+                    const activeIcon = link.querySelector('.material-symbols-outlined');
+                    if (activeIcon) activeIcon.style.fontVariationSettings = '"FILL" 1';
+
+                    // Update category and filter
+                    const categoryTextElement = link.querySelector('span.font-label-md');
+                    if (categoryTextElement) {
+                        currentCategory = categoryTextElement.textContent.trim();
+                        filterProducts();
+                    }
+                });
+            });
+
+            // Mobile menu toggle
+            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+
+            // Handle URL query parameter for category
+            const urlParams = new URLSearchParams(window.location.search);
+            const categoryParam = urlParams.get('category');
+            if (categoryParam) {
+                const targetText = categoryParam.toLowerCase();
+                const targetLink = Array.from(categoryLinks).find(link => {
+                    const span = link.querySelector('span.font-label-md');
+                    return span && span.textContent.toLowerCase().includes(targetText);
+                });
+
+                if (targetLink) {
+                    targetLink.click();
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
