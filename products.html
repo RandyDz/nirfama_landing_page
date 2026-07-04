@@ -4,8 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>All Products | PT. Niroga Farma Digitama</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <title>Produk Kami | PT. Niroga Farma Digitama</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
+
+
+    </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet">
     <link
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
@@ -142,7 +145,7 @@
                 <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200"
                     href="index.html">Home</a>
                 <a class="text-primary font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors duration-200"
-                    href="products.html">Products</a>
+                    href="products.html">Produk</a>
                 <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200"
                     href="about.html">Tentang Kami</a>
                 <a class="text-on-surface-variant font-label-md hover:text-primary transition-colors duration-200"
@@ -180,7 +183,7 @@
             class="hidden md:hidden absolute left-0 w-full bg-surface-container-lowest border-b border-outline-variant shadow-lg flex-col px-md py-sm z-50 top-full">
             <a class="text-on-surface-variant font-label-md py-3 border-b border-outline-variant/30 hover:text-primary transition-colors"
                 href="index.html">Home</a>
-            <a class="text-primary font-bold py-3 border-b border-outline-variant/30" href="products.html">Products</a>
+            <a class="text-primary font-bold py-3 border-b border-outline-variant/30" href="products.html">Produk</a>
             <a class="text-on-surface-variant font-label-md py-3 border-b border-outline-variant/30 hover:text-primary transition-colors"
                 href="about.html">Tentang Kami</a>
             <a class="text-on-surface-variant font-label-md py-3 border-b border-outline-variant/30 hover:text-primary transition-colors"
@@ -238,6 +241,11 @@
                     <span class="material-symbols-outlined hidden md:block">eco</span>
                     <span class="font-label-md text-[13px] md:text-label-md">Asam Amino & Humat</span>
                 </a>
+                <a class="flex-none flex items-center gap-sm px-3 py-1.5 md:px-md md:py-sm text-on-surface-variant hover:bg-surface-variant rounded-full transition-all active:scale-95 whitespace-nowrap"
+                    href="#">
+                    <span class="material-symbols-outlined hidden md:block">grass</span>
+                    <span class="font-label-md text-[13px] md:text-label-md">PPC</span>
+                </a>
             </nav>
         </aside>
         <!-- Main Content Area -->
@@ -257,8 +265,8 @@
             <div id="productGrid"
                 class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-xs sm:gap-sm">
                 <!-- Product 1 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             data-alt="etafit." src="images/product/etafit/etafit.avif">
@@ -269,13 +277,16 @@
                             Etafit</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Susu</span>
+                        <div class="hidden product-description">Produk susu herbal, diformulasikan untuk
+                            membantu penyembuhan pernafasan. Diracik menggunakan bahan-bahan alami pilihan &
+                            sudah halal MUI serta BPOM.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
                 <!-- Product 2 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/etafit/etafit_gold.avif" alt="etafit gold">
@@ -286,13 +297,16 @@
                             Etafit Gold</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Susu</span>
+                        <div class="hidden product-description">Etafit Gold adalah susu kambing herbal
+                            premium yang dirancang untuk menguatkan tulang, menjaga sendi, serta
+                            membantu meredakan nyeri rematik secara alami.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
                 <!-- Product 3 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/manohara_premium.avif" alt="manohara premium">
@@ -303,13 +317,16 @@
                             Manohara Premium</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <div class="hidden product-description">Manohara Premium berfungsi untuk
+                            mencegah kerontokan pada
+                            daun, bunga dan buah. Juga mencegah penyakit jamur, busuk & layu pada tanaman. </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
                 <!-- Product 4 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/permata.avif" alt="permata">
@@ -320,13 +337,16 @@
                             Permata</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">KCL</span>
+                        <div class="hidden product-description">Permata membantu memperkokoh akar dan
+                            batang tanaman, membantu dalam penyerapan air dan unsur hara, mencegah kerontokan
+                            bunga dan buah.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
                 <!-- Product 5 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/dewa_dewi.avif" alt="dewa-dewi">
@@ -337,13 +357,16 @@
                             DEWA-DEWI </h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">KCL</span>
+                        <div class="hidden product-description">Dewa Dewi berfungsi untuk merangsang
+                            pembentukan bunga & bakal buah, memperpanjang umur produktif tanaman, serta
+                            meningkatkan daya tahan tanaman.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
                 <!-- Product 6 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/mano_mano.avif" alt="mano mano">
@@ -354,13 +377,16 @@
                             Mano Mano</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">KCL</span>
+                        <div class="hidden product-description">Mano mano merupakan pupuk KCL Cair untuk semua jenis
+                            tanaman yang menyediakan nutrisi lengkap dan siap serap yang sangat dibutuhkan untuk
+                            pertumbuhan tanaman.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
                 <!--Product 7-->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/tridi_stick.avif" alt="tridi stick">
@@ -371,14 +397,17 @@
                             Tridi Stick</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">Tridi Stick adalah formula surfaktan khusus yang
+                            berfungsi sebagai perekat, penembus, perata, dan pembasah universal untuk mengoptimalkan
+                            kinerja penyemprotan pada tanaman. </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 8 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/safiraa.avif" alt="safiraa">
@@ -389,14 +418,26 @@
                             Safiraa</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">Perekat Safiraa dapat digunakan dan dicampurkan dengan
+                            berbagai jenis pestisida (herbisida, fungisida, inseketisida) dan juga pupuk cair lainnya.
+
+                            Manfaat Perekat Safiraa :
+
+                            1. Mengoptimalkan penyerapan pestisida dan pupuk ke dalam jaringan tanaman terutama pada
+                            tanaman yang memiliki permukaan daun berkutikula (berlapis lilin dan berbulu)
+
+                            2. Meningkatkan fungsi pestisida, pupuk daun dan zat pengatur tumbuh
+
+                            3. Mengefektifkan penggunaan pestisida, pupuk dan zat pengatur tumbuh sehingga tersebar
+                            merata dan menempel lama</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 9 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/mila_stick.avif" alt="mila stick">
@@ -407,14 +448,37 @@
                             Mila Stick</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">Mila Stick adalah produk formula pembantu pestisida dan
+                            pupuk cair yang dirancang khusus sebagai perekat, penembus, perata, dan pembasah untuk
+                            memaksimalkan efikasi penyemprotan pada tanaman. Produk ini sangat cocok digunakan baik pada
+                            fase vegetatif maupun generatif untuk memastikan nutrisi dan proteksi terserap sempurna ke
+                            dalam jaringan tanaman.
+
+
+
+                            Fungsi dan Keunggulan Utama Mila Stick:
+
+                            Daya Rekat Kuat: Mencegah pestisida atau pupuk cair luntur oleh air hujan atau menguap
+                            akibat panas matahari.
+
+                            Menembus Jaringan Tanaman: Membantu menembus lapisan lilin atau bulu-bulu halus pada daun
+                            sehingga obat langsung masuk ke sistemik tanaman.
+
+                            Memaksimalkan Tingkat Efikasi: Meratakan penyebaran butiran semprot ke seluruh bagian
+                            tanaman secara optimal.
+
+                            Menghemat Penggunaan Pestisida: Meminimalkan pemborosan obat (pestisida, fungisida,
+                            insektisida) karena formula bekerja jauh lebih efisien.
+
+                        </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 10 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/regge_stick.avif" alt="regge stick">
@@ -425,14 +489,33 @@
                             Regge Stick</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">Regge Stick adalah bahan pembantu (adjuvant)
+                            non-pestisida berbentuk larutan yang dirancang khusus untuk meningkatkan efektivitas
+                            penyemprotan pupuk, zat pengatur tumbuh (ZPT), maupun pestisida (insektisida, fungisida,
+                            herbisida). Produk ini bekerja dengan cara mengurangi tegangan permukaan air secara optimal,
+                            sehingga butiran semprot menyebar lebih merata dan melekat lebih lama pada permukaan
+                            tanaman.
+
+
+
+                            Fungsi Utama Regge Stick:
+
+                            1. Mengefektifkan penggunaan pestisida dan pupuk karena cairan dapat tersebar merata dan
+                            menempel jauh lebih lama pada tanaman.
+
+                            2. Membantu mempercepat proses penembusan cairan semprot pada permukaan daun yang berlapis
+                            lilin (waxy layers) maupun yang memiliki karakteristik berbulu.
+
+                            3. Mengoptimalkan fungsi kerja pestisida, pupuk cair, dan zat pengatur tumbuh sehingga tidak
+                            mudah tercuci oleh air hujan atau menguap karena panas matahari.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 11 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/new_rekat.avif" alt="new rekat">
@@ -443,14 +526,40 @@
                             New Rekat</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">New Rekat adalah formula khusus penembus, perekat, dan
+                            perata non-ionik yang berfungsi untuk meningkatkan efisiensi kerja pestisida (insektisida,
+                            fungisida, herbisida) serta pupuk daun. Kandungan aktif Sodium Lauryl Ether Sulfate 70%
+                            bekerja efektif menurunkan tegangan permukaan air, sehingga butiran semprot menjadi lebih
+                            halus dan menyebar merata ke seluruh bagian tanaman.
+
+
+
+                            Mengapa Menggunakan New Rekat?
+
+                            1. Meningkatkan dan mempercepat penetrasi insektisida, fungisida, dan herbisida ke dalam
+                            jaringan tubuh tanaman maupun organisme pengganggu tanaman.
+
+                            2. Mengoptimalkan penyerapan pupuk daun dan Zat Pengatur Tumbuh (ZPT) ke dalam jaringan
+                            tanaman.
+
+                            3. Membantu pembasahan pestisida dan pupuk daun, terutama pada tanaman yang memiliki
+                            permukaan daun berlapis zat lilin atau berbulu.
+
+                            4. Menurunkan tegangan permukaan air semprotan pada permukaan daun sehingga cairan tidak
+                            mudah luntur oleh air hujan.
+
+                            5. Memperkecil butiran semprot yang keluar dari nozzle, membuat penggunaan pestisida jauh
+                            lebih hemat, efisien, dan merata.
+
+                        </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 12 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/you_stick.avif" alt="you stick">
@@ -461,14 +570,30 @@
                             You Stick</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">YOU Stick merupakan bahan perata, perekat, dan penembus
+                            non-ionik berkualitas tinggi yang diformulasikan khusus untuk dicampurkan dengan larutan
+                            insektisida, fungisida, herbisida, maupun pupuk cair. Produk ini bekerja aktif mengurangi
+                            tegangan permukaan butiran semprot, sehingga larutan pestisida dapat menyebar secara merata
+                            dan melekat lebih kuat pada seluruh bagian tanaman.
+
+
+
+                            Mengapa Menggunakan YOU Stick?
+
+                            Tanaman tertentu memiliki permukaan daun yang mengandung lapisan lilin atau berbulu halus
+                            yang sukar ditembus air. Kondisi ini sering kali membuat pengaplikasian pestisida dan pupuk
+                            daun menjadi tidak efektif karena larutan langsung luntur sebelum diserap. YOU Stick
+                            mengatasi masalah tersebut dengan memecah resistensi permukaan daun secara cepat dan
+                            aman.
+                        </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 13 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/super_stick.avif" alt="super stick">
@@ -479,14 +604,20 @@
                             Super Stick</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">New Super Stick adalah bahan pencampur pestisida
+                            (insektisida, fungisida, herbisida) dan pupuk cair yang berfungsi sebagai perekat, perata,
+                            dan penembus daun. Fungsinya untuk menurunkan tegangan permukaan air semprot agar larutan
+                            menyebar lebih merata, menempel lebih kuat, meresap lebih cepat ke dalam daun, dan tidak
+                            mudah tercuci hujan, sehingga meningkatkan efektivitas penyemprotan serta menghemat
+                            penggunaan pestisida/pupuk. </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 14 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/djitoe.avif" alt="djitoe">
@@ -497,14 +628,31 @@
                             Djitoe</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">Manfaat :
+
+                            1. Meningkatkan dan mempercepat penembusan (penetrasi) insektisida, fungisida dan herbisida
+                            kedalam jaringan tubuh tanaman maupun organisme pengganggu tanaman
+
+                            2 Meningkatkan penyerapan pupuk daun dan zat pengatur tumbuh (ZPT) kedalam jaringan tubuh 3.
+                            tanaman
+
+                            3. Membantu pembasahan pestisida dan pupuk daun terutama pada tanaman yang berlapis zat
+                            lilin dan berbulu
+
+                            4. Menurunkan tegangan permukaan air semprotan pada permukaan daun
+
+                            5. Memperkecil butiran semprot yang keluar dari nozle sehingga penyemprotan pestisida lebih
+                            hemat dan merata
+
+                        </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 15 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/astron.avif" alt="astron">
@@ -515,14 +663,37 @@
                             Astron</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">Astron adalah formula bahan pembasah, perekat, penembus,
+                            dan perata non-ionik berkualitas premium. Produk ini dirancang khusus untuk dicampurkan
+                            dengan larutan insektisida, fungisida, maupun herbisida guna menurunkan tegangan permukaan
+                            butir-butir semprot pestisida secara optimal.
+
+
+
+                            Dengan menggunakan Astron, larutan semprot akan tersebar merata dan melekat kuat pada
+                            permukaan daun, bahkan pada jenis daun yang memiliki lapisan lilin atau berbulu halus yang
+                            biasanya sukar ditembus oleh air.
+
+
+
+                            Fungsi Utama Astron:
+
+                            1. Meningkatkan kerekatan pestisida pada permukaan daun sehingga tidak mudah larut atau
+                            luntur oleh air hujan.
+
+                            2. Meningkatkan daya tembus insektisida, fungisida, dan herbisida ke dalam jaringan tanaman
+                            atau tubuh hama.
+
+                            3. Membantu menembus lapisan lilin alami pada daun dan kulit pelindung hama untuk efikasi
+                            pestisida yang lebih maksimal.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 16 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/mano_sari_merah.avif" alt="mano sari merah">
@@ -533,14 +704,28 @@
                             Mano Sari Merah</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <div class="hidden product-description">Manosari Buah memiliki kandungan kalium yang tinggi yang
+                            bermanfaat :
+
+                            1. Memperkuat struktur daun dan perakaran pada tanaman
+
+                            2. Merangsang pertumbuhan tunas baru
+
+                            3. Memacu pertumbuhan vegetatif dan generatif
+
+                            4. Meningkatkan kualitas dan kuantitas hasil panen
+
+                            5. Meningkatkan ketahanan tanaman.
+
+                        </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 17 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/liontin_premium.avif" alt="liontin stick">
@@ -551,14 +736,36 @@
                             Liontin Stick</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">Liontin stick merupakan perekat yang bisa di aplikasikan
+                            pada tanaman sayur sayuran atau buah buahan
+
+
+
+                            Kandungan : Sodium Lauryl Ether Sulfate 70%
+
+
+
+                            Manfaat :
+
+                            1. Perekat yang bisa digunakan untuk untuk semua jenis Pestisida
+
+                            2. Merekatkan Pestisida
+
+                            3. Menambah Daya Sebar Pestisida Pada Daun
+
+                            4. Meratakan Cairan Semprot
+
+                            5. Menembus Bagian Jaringan Daun
+
+                            6. Dapat digunakan di Musim Penghujan maupun Kemarau</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 18 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/manosari_npk.avif" alt="mano sari npk">
@@ -569,14 +776,27 @@
                             Mano Sari NPK</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <div class="hidden product-description">Mano Sari NPK memiliki manfaat sebagai berikut :
+
+                            1. Meningkatkan kesuburan dan jumlah daun
+
+                            2. Menguatkan struktur daun tanaman
+
+                            3. Menambah kekuatan akar semakin kokoh
+
+                            4. Merangsang cepat tumbuh tunas baru
+
+                            5. Menjaga ketahanan tanaman dari penyakit
+
+                            6. Meningkatkan kualitas dan kuantitas jumlah hasil panen</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 19 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/liontin_npk.avif" alt="liontin npk">
@@ -587,14 +807,23 @@
                             Liontin NPK</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <div class="hidden product-description">Liontin NPK memiliki manfaat sebagai berikut :
+
+                            1. Memacu Pertumbuhan Vegetatif Dan Generatif Pada Tanaman
+
+                            2. Mempererat Batang, Bunga Dan Akar Tanaman
+
+                            3. Meningkatkan Ketahanan Pada Tanaman, Sehingga Tidak Mudah Terserang Penyakit
+
+                            4. Meningkatkan Hasil Dan Kualitas Produksi</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 20 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/super_soil.avif" alt="super soil">
@@ -606,14 +835,21 @@
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Asam
                             Amino & Humat</span>
+                        <div class="hidden product-description">Super-Soil Asam Humat Plus 1KG adalah solusi efektif
+                            untuk memperbaiki kualitas tanah. Produk ini membantu menetralkan pH tanah yang asam dan
+                            meningkatkan kapasitas tukar kation, sehingga tanah menjadi lebih subur dan produktif.
+                            Dengan kandungan asam humat yang tinggi, produk ini juga mampu menggemburkan tanah dan
+                            meningkatkan serapan nutrisi. Selain itu, Super-Soil mendukung pertumbuhan mikroorganisme
+                            baik yang penting untuk kesehatan tanah. Cocok digunakan untuk berbagai jenis tanaman,
+                            termasuk sayuran, buah, dan perkebunan.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 21 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/mano_stick.avif" alt="mano stick">
@@ -624,14 +860,28 @@
                             Mano Stick</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">Manfaat :
+
+                            1. Mengefektifkan penggunaan pestisida dan pupuk karena dapat tersebar merata dan menempel
+                            lama
+
+                            2. Membantu dan mempercepat proses penembusan pada permukaan daun berlapis lilin dan berbulu
+
+                            3. Mengoptimalkan fungsi pestisida, pupuk, dan ZPT
+
+
+
+                            Cara Penggunaan :
+
+                            Digunakan dalam dosis 0,25 – 0,5 cc/liter.</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 22 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/windaa.avif" alt="windaa">
@@ -642,14 +892,27 @@
                             Windaa</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <div class="hidden product-description">Fungsi Windaa :
+
+                            1. Meningkatkan ketahanan tanaman
+                            2. Mencegah tanaman dari penyakit jamur, busuk, layu dan rontok
+                            3. Merangsang pembentukan akar dan menguatkan batang
+                            4. Meningkatkan kuantitas dan kualitas hasil panen
+                            5. Memperbaiki kualitas bentuk dan warna buah
+                            6. Memperpanjang daya simpan hasil panen
+                            7. Menunda penuaan daun dan buah
+
+                            Produk ini dapat diaplikasikan pada tanaman : Ketimun, Jagung, Kacang Panjang, Stroberi,
+                            Wortel, Seledri, Melon, Kubis, Krisan, Padi, dll
+                        </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 23 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/inti_grow.avif" alt="inti grow">
@@ -660,14 +923,20 @@
                             Inti Grow</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <div class="hidden product-description">Fungsi Intigrow :
+                            1. Meningkatkan pertumbuhan tanaman
+                            2. Menguatkan struktur perakaran
+                            3. Merangsang pertumbuhan tunas baru
+                            4. Meningkatkan kualitas dan kuantitas hasil panen
+                            5. Meningkatkan ketahanan tanaman terhadap hama dan penyakit</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 24 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/manohara_mesh.avif" alt="manohara mesh">
@@ -678,14 +947,25 @@
                             Manohara Mesh</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <div class="hidden product-description">ManoHARA MESH adalah pupuk kalsium berkualitas tinggi
+                            (Calbor Fertilizer) yang diformulasikan dengan partikel sangat halus (MESH 2500 atau 4000)
+                            agar mudah larut dalam air, berfungsi untuk mencegah kerontokan daun, bunga, dan buah,
+                            mengatasi penyakit jamur dan busuk, serta meningkatkan kualitas dan kuantitas panen pada
+                            berbagai tanaman dengan kandungan kalsium, boron, magnesium, dan seng.
+
+
+
+                            Kandungan
+
+                            CaCO3 71.35%, CaO 31.64%, MgO 8.92%, Zn 2.87%, SiO2 4.79%, + BORON 0.53%</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
 
                 <!-- Product 25 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/99.avif" alt="99">
@@ -696,13 +976,28 @@
                             99</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <div class="hidden product-description">Fungsi Kalsium Murni 99 :
+                            1. Menetralisir kemasaman tanah
+
+                            2. Meningkatkan kadar karbohidrat & gula dalam buah
+
+                            3. Membuat tanaman lebih tahan terhadap hama dan berbagai penyakit
+
+                            4. Membantu perkembangan akar, memperkuat batang & pembentukan serat buah
+
+                            5. Mendorong produksi tanaman penghasil biji-bijian dan meningkatkan kualitas buah (bentuk,
+                            kadar,& warna) menjadi lebih baik
+
+                            Produk ini dapat diaplikasikan pada tanaman : Ketimun, Jagung, Kacang Panjang, Stroberi,
+                            Wortel, Seledri, Melon, Kubis, Krisan, Padi, dll
+                        </div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
                 <!-- Product 26 -->
-                <div
-                    class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer">
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
                     <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
                         <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             src="images/product/tani/mano_calbor.avif" alt="99">
@@ -710,13 +1005,209 @@
                     <div class="p-2 sm:p-3 flex flex-col flex-1">
                         <h3
                             class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
-                            99</h3>
+                            Mano Calbor</h3>
                         <span
                             class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <div class="hidden product-description">Pupuk Kalsium yang memiliki kandungan mesh tinggi
+                            sehingga akan larut sempurna. Mano Calbor dapat dicampur dengan pupuk lain. Apabila ditambah
+                            perekat hasilnya akan semakin maksimal.
+
+                            Mano Calbor mempunyai manfaat :
+
+                            1. Mencegah Kerontokan Daun, Bunga, dan Buah
+
+                            2. Menegakkan batang tanaman dan menguatkan akar
+
+                            3. Menjaga tanaman dari rontok, busuk, dan jamur
+
+                            4. Menghasilkan biji yang semakin padat berisi
+
+                            5. Memperbaiki kualitas bentuk dan warna buah</div>
                         <button
                             class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
                     </div>
                 </div>
+
+                <!-- Product 27 -->
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/manohara_hijau.avif" alt="manohara_hijau">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Manohara Hijau</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">PPC</span>
+                        <div class="hidden product-description">Pupuk Cair Manohara Hijau 1 Liter adalah solusi ideal
+                            untuk meningkatkan pertumbuhan tanaman Anda. Dengan kandungan N-Total 5.2%, P2O5 2.3%, dan
+                            K2O 14%, pupuk ini membantu memperbaiki akar, meningkatkan ketahanan tanaman, dan menguatkan
+                            struktur daun. Selain itu, pupuk ini juga memperbaiki tekstur jaringan dan meningkatkan
+                            jumlah daun serta buah.</div>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <!-- Product 28 -->
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/liontin_mesh.webp" alt="liontin_mesh">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Liontin Mesh</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <div class="hidden product-description">Manfaat :
+
+                            1. Memacu pertumbuhan vegetatif dan generatif pada tanaman
+
+                            2. Memperkuat batang, bunga dan akar tanaman
+
+                            3. Meningkatkan ketahanan pada tanaman, sehingga tidak mudah terserang penyakit
+
+                            4. Meningkatkan hasil dan kualitas produksi
+
+                            Aturan Pemakaian :
+
+                            – Bunga & Sayuran : semprot ( 3gr/liter air ) – kocor ( 15 gr/liter air )
+
+                            – Buah & Palawija : semprot ( 5gr/liter air ) kocor ( 20gr/liter air )
+
+                        </div>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <!-- Product 29 -->
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/ddiana.webp" alt="d'diana">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            d'Diana</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Kalsium</span>
+                        <div class="hidden product-description">
+                            Fungsi d’DIANA :
+                            - Membantu perkembangan akar dan memperkuat tegaknya batang dan memacu pembentukan serat
+                            buah
+
+                            - Membuat biji tanaman menjadi padat berisi, merangsang pertumbuhan bunga, dan mempercepat
+                            proses pematangan buah
+
+                            - Meningkatkan ketahan tanaman terhadap serangan hama dan berbagai penyakit (jamur, busuk, &
+                            kerontokan buah)
+
+                            - Mendorong produksi tanaman penghasil biji-bijian; padi, jagung, kedelai, dll
+
+                            - Meningkatkan kualitas bentuk, kadar, dan warna buah menjadi lebih baik
+                        </div>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/premium_ljs.avif" alt="Premium LJS">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Premium LJS</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">Perekat</span>
+                        <div class="hidden product-description">
+                            Kandungan : Sodium Lauryl Ether Sulfate 70%
+
+                            Bentuk : Cair (Liquid)
+
+                            Fungsi Premium LJS :
+
+                            * Mengefektifkan penggunaan pestisida dan pupuk karena tersebar merata dan menempel lama
+
+                            * Membantu dan mempercepat proses penembusan pada permukaan daun berlapis lilin dan berbulu
+
+                            * Mengoptimalkan fungsi pestisida, pupuk, dan zat pengatur tumbuh
+                        </div>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/niroga.avif" alt="Niroga">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Niroga</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">MKP</span>
+                        <div class="hidden product-description">
+                            Kandungan: Difosforus Pentoksida (P2O5) 16,69%, Kalium Oksida (K2O) 10,62%
+
+                            Manfaat:
+                            - Memperbanyak dan menyeragamkan pembungaan
+
+                            - Menekan kerontokan bunga & mendukung pembuahan
+
+                            - Memacu pertumbuhan akar lebih kuat
+
+                            - Mempercepat fase generatif tanaman
+
+                            - Mendukung fotosintesis tanaman
+                        </div>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+                <div class="bg-white rounded-md border border-outline-variant/50 hover:border-primary/50 overflow-hidden shadow-sm hover:shadow-md flex flex-col transition-all duration-300 group cursor-pointer"
+                    onclick="openProductModal(this)">
+                    <div class="relative aspect-square w-full bg-surface-container-low overflow-hidden">
+                        <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                            src="images/product/tani/manohara_buah.webp" alt="manohara buah">
+                    </div>
+                    <div class="p-2 sm:p-3 flex flex-col flex-1">
+                        <h3
+                            class="font-body-sm text-[13px] sm:text-sm font-medium text-on-surface line-clamp-2 leading-snug mb-1">
+                            Manohara Buah</h3>
+                        <span
+                            class="text-[10px] font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-1 py-0.5 w-max mb-2">KCL</span>
+                        <div class="hidden product-description">
+                            Fungsi ManoHARA Buah
+
+                            1. Meningkatkan jumlah daun.
+
+                            2. Menguatkan struktur perakaran.
+
+                            3. Memperbaiki tekstur jaringan hidup.
+
+                            4. Memperbanyak jumlah buah.
+
+                            5. Meningkatkan daya tahan tanaman.
+                        </div>
+                        <button
+                            class="w-full mt-auto py-1.5 bg-primary text-white font-bold rounded-sm text-[11px] sm:text-xs transition-colors hover:bg-primary-container active:scale-95">Beli</button>
+                    </div>
+                </div>
+
+
             </div>
         </main>
     </div>
@@ -831,6 +1322,76 @@
                 }
             }
         });
+    </script>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-black/50 backdrop-blur-sm transition-opacity" onclick="closeProductModal()">
+        </div>
+
+        <!-- Modal Content -->
+        <div
+            class="relative bg-surface-container-lowest rounded-xl shadow-xl w-full max-w-3xl overflow-hidden transform transition-all flex flex-col md:flex-row max-h-[90vh]">
+            <!-- Close Button -->
+            <button onclick="closeProductModal()"
+                class="absolute top-2 right-2 md:top-3 md:right-3 w-8 h-8 flex items-center justify-center bg-black/20 hover:bg-black/30 text-white md:text-black rounded-full z-10 transition-colors">
+                <span class="material-symbols-outlined text-sm">close</span>
+            </button>
+
+            <!-- Image Area -->
+            <div class="w-full md:w-1/2 h-64 md:h-auto bg-surface-container-low">
+                <img id="modalImage" src="" alt="" class="w-full h-full object-cover">
+            </div>
+
+            <!-- Details Area -->
+            <div class="p-4 md:p-8 w-full md:w-1/2 flex flex-col overflow-y-auto">
+                <span id="modalCategory"
+                    class="text-xs md:text-sm font-label-md text-primary bg-primary-fixed border border-primary/20 rounded-sm px-2 py-1 w-max mb-4"></span>
+
+                <h2 id="modalTitle" class="font-headline-sm text-2xl md:text-3xl font-bold text-on-surface mb-3"></h2>
+
+                <p id="modalDescription"
+                    class="text-body-md md:text-body-lg text-on-surface-variant mb-8 flex-1 leading-relaxed"></p>
+
+                <button
+                    class="w-full mt-auto py-3 bg-primary text-white font-bold rounded-lg text-sm md:text-base transition-colors hover:bg-primary-container active:scale-95">Beli
+                    Sekarang</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openProductModal(card) {
+            const title = card.querySelector('h3').innerText;
+            const category = card.querySelector('span').innerText;
+            const imgUrl = card.querySelector('img').src;
+            const imgAlt = card.querySelector('img').alt || title;
+            const descElement = card.querySelector('.product-description');
+            const desc = descElement ? descElement.innerText : 'Deskripsi produk tidak tersedia.';
+
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalCategory').innerText = category;
+            document.getElementById('modalImage').src = imgUrl;
+            document.getElementById('modalImage').alt = imgAlt;
+            document.getElementById('modalDescription').innerText = desc;
+
+            const modal = document.getElementById('productModal');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+
+            // Prevent body scroll
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeProductModal() {
+            const modal = document.getElementById('productModal');
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+
+            // Restore body scroll
+            document.body.style.overflow = '';
+        }
     </script>
 </body>
 
