@@ -630,7 +630,8 @@
                             </li>
                         </ul>
 
-                        <a href="#"
+                        <a href="#form-pendaftaran"
+                            onclick="document.getElementById('kelas').value = 'Biasa (Fundamental)';"
                             class="w-full py-4 text-center rounded-xl border-2 border-primary text-primary font-bold hover:bg-primary/5 transition-colors">
                             Pilih Paket Biasa
                         </a>
@@ -687,7 +688,8 @@
                             </li>
                         </ul>
 
-                        <a href="#"
+                        <a href="#form-pendaftaran"
+                            onclick="document.getElementById('kelas').value = 'Premium (Job Guarantee)';"
                             class="w-full py-4 text-center rounded-xl bg-secondary text-on-secondary-container font-bold hover:brightness-110 shadow-lg transition-all">
                             Pilih Paket Premium
                         </a>
@@ -695,7 +697,142 @@
                 </div>
             </div>
         </section>
+
+        <!-- Form Pendaftaran Section -->
+        <section id="form-pendaftaran" class="py-24 bg-white relative">
+            <div class="max-w-3xl mx-auto px-md md:px-lg relative z-10">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-on-background mb-4">Form Pendaftaran Bootcamp</h2>
+                    <p class="text-body-lg text-on-surface-variant">Isi data diri Anda di bawah ini untuk memulai
+                        langkah pertama. Data Anda dijamin aman dan rahasia.</p>
+                </div>
+
+                <div
+                    class="glass-panel p-8 md:p-10 rounded-3xl bg-surface-container-lowest border border-outline-variant/30 shadow-xl">
+                    <form id="bootcampForm" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Nama -->
+                            <div class="space-y-2">
+                                <label for="nama" class="block text-sm font-bold text-on-surface">Nama Lengkap <span
+                                        class="text-error">*</span></label>
+                                <input type="text" id="nama" name="nama" required
+                                    class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-surface outline-none"
+                                    placeholder="Masukkan nama lengkap">
+                            </div>
+                            <!-- Email -->
+                            <div class="space-y-2">
+                                <label for="email" class="block text-sm font-bold text-on-surface">Email <span
+                                        class="text-error">*</span></label>
+                                <input type="email" id="email" name="email" required
+                                    class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-surface outline-none"
+                                    placeholder="nama@email.com">
+                            </div>
+                            <!-- Nomor HP -->
+                            <div class="space-y-2">
+                                <label for="nohp" class="block text-sm font-bold text-on-surface">Nomor HP/WhatsApp
+                                    <span class="text-error">*</span></label>
+                                <input type="tel" id="nohp" name="nohp" required
+                                    class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-surface outline-none"
+                                    placeholder="081234567890">
+                            </div>
+                            <!-- Usia -->
+                            <div class="space-y-2">
+                                <label for="usia" class="block text-sm font-bold text-on-surface">Usia <span
+                                        class="text-error">*</span></label>
+                                <input type="number" id="usia" name="usia" required min="15" max="100"
+                                    class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-surface outline-none"
+                                    placeholder="Contoh: 22">
+                            </div>
+                            <!-- Asal Kota dan Provinsi -->
+                            <div class="space-y-2 md:col-span-2">
+                                <label for="kota_provinsi" class="block text-sm font-bold text-on-surface">Asal Kota &
+                                    Provinsi <span class="text-error">*</span></label>
+                                <input type="text" id="kota_provinsi" name="kota_provinsi" required
+                                    class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-surface outline-none"
+                                    placeholder="Contoh: Surakarta, Jawa Tengah">
+                            </div>
+                            <!-- Pilihan Kelas -->
+                            <div class="space-y-2 md:col-span-2">
+                                <label for="kelas" class="block text-sm font-bold text-on-surface">Pilihan Kelas <span
+                                        class="text-error">*</span></label>
+                                <select id="kelas" name="kelas" required
+                                    class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-surface outline-none appearance-none cursor-pointer bg-white">
+                                    <option value="" disabled selected>Pilih paket bootcamp</option>
+                                    <option value="Biasa (Fundamental)">Paket Biasa (Fundamental) - Rp 1.499.000
+                                    </option>
+                                    <option value="Premium (Job Guarantee)">Paket Premium (Job Guarantee) - Rp 2.999.000
+                                    </option>
+                                </select>
+                            </div>
+                            <!-- Alasan Join -->
+                            <div class="space-y-2 md:col-span-2">
+                                <label for="alasan" class="block text-sm font-bold text-on-surface">Alasan Join Bootcamp
+                                    <span class="text-outline-variant font-normal">(Opsional)</span></label>
+                                <textarea id="alasan" name="alasan" rows="3"
+                                    class="w-full px-4 py-3 rounded-xl border border-outline-variant focus:border-primary focus:ring-2 focus:ring-primary/20 transition-colors bg-surface outline-none resize-none"
+                                    placeholder="Ceritakan singkat mengapa Anda ingin mengikuti bootcamp ini..."></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="submitBtn"
+                            class="w-full py-4 mt-4 text-center rounded-xl bg-primary text-white font-bold hover:bg-primary-container shadow-lg hover:shadow-xl transition-all hover-lift">
+                            Kirim Pendaftaran
+                        </button>
+                    </form>
+                    <div id="formMessage" class="hidden mt-6 text-center font-bold p-4 rounded-xl transition-all"></div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <script>
+        // FORM SUBMISSION HANDLER
+        // URL Web App Google Apps Script Anda (Ganti dengan URL dari langkah deployment)
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzqK74mPxdyXjZguaE0N9_rOmFWtbBTmbDAIUouc7XQHQ6DzAtogqrIeg75lNAjy_0qGQ/exec';
+        const form = document.forms['bootcampForm'];
+        const submitBtn = document.getElementById('submitBtn');
+        const formMessage = document.getElementById('formMessage');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+
+            // Validasi form
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            if (scriptURL === 'https://script.google.com/macros/s/AKfycbzqK74mPxdyXjZguaE0N9_rOmFWtbBTmbDAIUouc7XQHQ6DzAtogqrIeg75lNAjy_0qGQ/execYOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+                formMessage.classList.remove('hidden', 'bg-primary-fixed', 'text-on-primary-fixed');
+                formMessage.classList.add('bg-error-container', 'text-error');
+                formMessage.innerText = 'Mohon maaf, sistem pendaftaran sedang dalam konfigurasi (URL Apps Script belum diatur).';
+                return;
+            }
+
+            // State loading
+            const originalBtnText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin align-middle mr-2">refresh</span> Mengirim...';
+
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    formMessage.classList.remove('hidden', 'bg-error-container', 'text-error');
+                    formMessage.classList.add('bg-primary-fixed', 'text-on-primary-fixed');
+                    formMessage.innerText = 'Pendaftaran berhasil dikirim! Tim kami akan segera menghubungi Anda melalui WhatsApp/Email.';
+                    form.reset();
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                })
+                .catch(error => {
+                    formMessage.classList.remove('hidden', 'bg-primary-fixed', 'text-on-primary-fixed');
+                    formMessage.classList.add('bg-error-container', 'text-error');
+                    formMessage.innerText = 'Terjadi kesalahan jaringan. Silakan coba lagi.';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                    console.error('Error!', error.message);
+                });
+        });
+    </script>
 
     <!-- Footer -->
     <footer class="w-full py-xl bg-primary dark:bg-primary-container">
@@ -802,9 +939,24 @@
         // Countdown Timer Logic
         const countdownTimer = document.getElementById('countdownTimer');
         if (countdownTimer) {
-            // Set end date to 7 days from now
-            const endDate = new Date();
-            endDate.setDate(endDate.getDate() + 7);
+            // Cek apakah sudah ada waktu akhir yang tersimpan di localStorage
+            let endDate;
+            const savedEndDate = localStorage.getItem('bootcampCountdownEnd');
+            
+            if (savedEndDate) {
+                endDate = new Date(parseInt(savedEndDate));
+                // Jika waktu promo sudah habis, kita bisa meresetnya (opsional)
+                if (endDate.getTime() < new Date().getTime()) {
+                    endDate = new Date();
+                    endDate.setDate(endDate.getDate() + 7);
+                    localStorage.setItem('bootcampCountdownEnd', endDate.getTime().toString());
+                }
+            } else {
+                // Set end date to 7 days from now and save to localStorage
+                endDate = new Date();
+                endDate.setDate(endDate.getDate() + 7);
+                localStorage.setItem('bootcampCountdownEnd', endDate.getTime().toString());
+            }
 
             function updateTimer() {
                 const now = new Date().getTime();
