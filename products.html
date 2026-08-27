@@ -49,7 +49,7 @@
                         "surface-bright": "#f9f9ff",
                         "secondary-container": "#fecf4d",
                         "on-secondary-container": "#725800",
-                        "secondary": "#765b00",
+                        "secondary": "#ffc503",
                         "on-surface": "#111c2d",
                         "error": "#ba1a1a",
                         "on-primary": "#ffffff",
@@ -123,13 +123,94 @@
         .product-card-shadow:hover {
             box-shadow: 0 10px 20px rgba(30, 41, 59, 0.1);
         }
+
+        /* Marquee Ticker Styling */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            flex-shrink: 0;
+            white-space: nowrap;
+            animation: marquee 28s linear infinite;
+        }
+
+        .marquee-container:hover .animate-marquee {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 
 <body class="bg-surface-container-lowest font-body-md text-on-surface overflow-x-hidden">
     <!-- Top Navigation Bar -->
     <header
-        class="sticky top-0 w-full z-50 bg-surface-container-lowest border-b border-outline-variant shadow-sm relative">
+        class="sticky top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant shadow-sm dark:shadow-none">
+        <!-- Running Text Announcement Bar -->
+        <div
+            class="bg-gradient-to-r from-primary via-primary-container to-primary text-white text-xs md:text-sm py-2 px-3 border-b border-white/10 shadow-inner">
+            <div class="max-w-container-max mx-auto flex items-center gap-2 md:gap-3">
+                <a href="career.html"
+                    class="flex items-center gap-1 bg-secondary text-on-secondary-fixed font-bold text-xs px-2.5 py-0.5 rounded-full shrink-0 shadow-sm hover:scale-105 transition-transform">
+                    <span class="material-symbols-outlined text-sm animate-pulse">campaign</span>
+                    <span class="whitespace-nowrap uppercase tracking-wider font-semibold">Info Loker</span>
+                </a>
+                <div class="relative overflow-hidden w-full flex items-center marquee-container">
+                    <a href="career.html"
+                        class="flex shrink-0 animate-marquee items-center gap-8 pr-8 text-white/90 hover:text-white transition-colors">
+                        <span class="inline-flex items-center gap-2">
+                            <span
+                                class="bg-secondary/20 text-secondary text-xs px-2 py-0.5 rounded font-semibold">REKRUTMEN
+                                BARU</span>
+                            <span>PT Niroga Farma Digitama membuka lowongan magang!</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-base">work</span>
+                            <span>Posisi: <strong class="text-secondary font-semibold">Advertiser</strong>, <strong
+                                    class="text-secondary font-semibold">Content Creator</strong>, <strong
+                                    class="text-secondary font-semibold">Finance (TAX)</strong>, & <strong
+                                    class="text-secondary font-semibold">Full-Stack Developer</strong></span>
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-base">near_me</span>
+                            <span>Penempatan: Sukoharjo, Jawa Tengah</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2 text-secondary font-semibold">
+                            <span>Klik di sini untuk info & pendaftaran &rarr;</span>
+                        </span>
+                    </a>
+                    <a href="career.html" aria-hidden="true"
+                        class="flex shrink-0 animate-marquee items-center gap-8 pr-8 text-white/90 hover:text-white transition-colors">
+                        <span class="inline-flex items-center gap-2">
+                            <span
+                                class="bg-secondary/20 text-secondary text-xs px-2 py-0.5 rounded font-semibold">REKRUTMEN
+                                BARU</span>
+                            <span>PT Niroga Farma Digitama membuka lowongan magang!</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-base">work</span>
+                            <span>Posisi: <strong class="text-secondary font-semibold">Advertiser</strong>, <strong
+                                    class="text-secondary font-semibold">Content Creator</strong>, <strong
+                                    class="text-secondary font-semibold">Finance (TAX)</strong>, & <strong
+                                    class="text-secondary font-semibold">Full-Stack Developer</strong></span>
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-base">near_me</span>
+                            <span>Penempatan: Sukoharjo, Jawa Tengah</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2 text-secondary font-semibold">
+                            <span>Klik di sini untuk info & pendaftaran &rarr;</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="flex justify-between items-center h-16 md:h-20 max-w-container-max mx-auto px-md md:px-lg gap-lg">
             <a href="index.html"
                 class="flex items-center gap-2 text-headline-md font-headline-md font-bold text-primary hover:no-underline">

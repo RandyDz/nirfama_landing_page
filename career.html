@@ -122,6 +122,38 @@
             transform: translateY(-4px);
             box-shadow: 0 10px 25px -5px rgba(30, 41, 59, 0.1);
         }
+
+        /* Marquee Ticker Styling */
+        @keyframes marquee {
+            0% {
+                transform: translateX(0%);
+            }
+
+            100% {
+                transform: translateX(-100%);
+            }
+        }
+
+        .animate-marquee {
+            display: flex;
+            flex-shrink: 0;
+            white-space: nowrap;
+            animation: marquee 28s linear infinite;
+        }
+
+        .marquee-container:hover .animate-marquee {
+            animation-play-state: paused;
+        }
+
+        /* Slider Scrollbar Hide */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
 </head>
 
@@ -130,6 +162,65 @@
     <!-- Top Navigation Bar -->
     <header
         class="sticky top-0 w-full z-50 bg-surface-container-lowest dark:bg-surface-container-lowest border-b border-outline-variant dark:border-outline-variant shadow-sm dark:shadow-none">
+        <!-- Running Text Announcement Bar -->
+        <div
+            class="bg-gradient-to-r from-primary via-primary-container to-primary text-white text-xs md:text-sm py-2 px-3 border-b border-white/10 shadow-inner">
+            <div class="max-w-container-max mx-auto flex items-center gap-2 md:gap-3">
+                <a href="career.html"
+                    class="flex items-center gap-1 bg-secondary text-on-secondary-fixed font-bold text-xs px-2.5 py-0.5 rounded-full shrink-0 shadow-sm hover:scale-105 transition-transform">
+                    <span class="material-symbols-outlined text-sm animate-pulse">campaign</span>
+                    <span class="whitespace-nowrap uppercase tracking-wider font-semibold">Info Loker</span>
+                </a>
+                <div class="relative overflow-hidden w-full flex items-center marquee-container">
+                    <a href="career.html"
+                        class="flex shrink-0 animate-marquee items-center gap-8 pr-8 text-white/90 hover:text-white transition-colors">
+                        <span class="inline-flex items-center gap-2">
+                            <span
+                                class="bg-secondary/20 text-secondary text-xs px-2 py-0.5 rounded font-semibold">REKRUTMEN
+                                BARU</span>
+                            <span>PT Niroga Farma Digitama membuka lowongan magang!</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-base">work</span>
+                            <span>Posisi: <strong class="text-secondary font-semibold">Advertiser</strong>, <strong
+                                    class="text-secondary font-semibold">Content Creator</strong>, <strong
+                                    class="text-secondary font-semibold">Finance (TAX)</strong>, & <strong
+                                    class="text-secondary font-semibold">Full-Stack Developer</strong></span>
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-base">near_me</span>
+                            <span>Penempatan: Sukoharjo, Jawa Tengah</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2 text-secondary font-semibold">
+                            <span>Klik di sini untuk info & pendaftaran &rarr;</span>
+                        </span>
+                    </a>
+                    <a href="career.html" aria-hidden="true"
+                        class="flex shrink-0 animate-marquee items-center gap-8 pr-8 text-white/90 hover:text-white transition-colors">
+                        <span class="inline-flex items-center gap-2">
+                            <span
+                                class="bg-secondary/20 text-secondary text-xs px-2 py-0.5 rounded font-semibold">REKRUTMEN
+                                BARU</span>
+                            <span>PT Niroga Farma Digitama membuka lowongan magang!</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-base">work</span>
+                            <span>Posisi: <strong class="text-secondary font-semibold">Advertiser</strong>, <strong
+                                    class="text-secondary font-semibold">Content Creator</strong>, <strong
+                                    class="text-secondary font-semibold">Finance (TAX)</strong>, & <strong
+                                    class="text-secondary font-semibold">Full-Stack Developer</strong></span>
+                        </span>
+                        <span class="inline-flex items-center gap-2">
+                            <span class="material-symbols-outlined text-secondary text-base">near_me</span>
+                            <span>Penempatan: Sukoharjo, Jawa Tengah</span>
+                        </span>
+                        <span class="inline-flex items-center gap-2 text-secondary font-semibold">
+                            <span>Klik di sini untuk info & pendaftaran &rarr;</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="flex justify-between items-center h-20 max-w-container-max mx-auto px-md md:px-lg">
             <a href="index.html"
                 class="flex items-center gap-2 text-headline-md font-headline-md font-bold text-primary dark:text-primary-fixed hover:no-underline">
@@ -223,6 +314,41 @@
 
         <!-- Job Vacancies Section (Instagram Style Cards) -->
         <section class="py-xl max-w-container-max mx-auto px-md md:px-lg">
+            <!-- Running Text Ticker Banner -->
+            <div
+                class="mb-10 overflow-hidden rounded-2xl bg-gradient-to-r from-primary via-primary-container to-primary p-4 shadow-lg text-white border border-primary-container/50 relative">
+                <div class="flex flex-col md:flex-row items-center gap-3">
+                    <div
+                        class="flex items-center gap-2 bg-secondary text-on-secondary-fixed font-bold text-xs md:text-sm px-3.5 py-1.5 rounded-full shrink-0 shadow-md">
+                        <span class="material-symbols-outlined text-lg animate-bounce">campaign</span>
+                        <span class="whitespace-nowrap uppercase tracking-wider">Pengumuman Lowongan MagangHub
+                            Terbaru</span>
+                    </div>
+                    <div class="relative overflow-hidden w-full flex items-center marquee-container py-1">
+                        <div
+                            class="flex shrink-0 animate-marquee items-center gap-8 pr-8 text-sm md:text-base font-medium">
+                            <span class="inline-flex items-center gap-2"><span>Rekrutmen Aktif 2026:
+                                    <strong>Advertiser</strong>, <strong>Content Creator</strong>, <strong>Finance
+                                        (TAX)</strong>, & <strong>Full-Stack Developer</strong></span></span>
+                            <span class="inline-flex items-center gap-2">📍 <span>Lokasi: Sukoharjo, Jawa
+                                    Tengah</span></span>
+                            <span class="inline-flex items-center gap-2"><span>Bagi kamu freshgraduate
+                                    dipersilakan melamar!</span></span>
+                        </div>
+                        <div aria-hidden="true"
+                            class="flex shrink-0 animate-marquee items-center gap-8 pr-8 text-sm md:text-base font-medium">
+                            <span class="inline-flex items-center gap-2"> || <span>Rekrutmen Aktif 2026:
+                                    <strong>Advertiser</strong>, <strong>Content Creator</strong>, <strong>Finance
+                                        (TAX)</strong>, & <strong>Full-Stack Developer</strong></span></span>
+                            <span class="inline-flex items-center gap-2">📍 <span>Lokasi: Sukoharjo, Jawa
+                                    Tengah</span></span>
+                            <span class="inline-flex items-center gap-2"><span>Bagi kamu freshgraduate
+                                    dipersilakan melamar!</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="text-center mb-xl">
                 <span class="text-secondary font-label-md tracking-widest uppercase">Lowongan Terbuka</span>
                 <h2 class="font-headline-lg text-headline-lg mt-sm text-primary">Informasi Loker Terbaru</h2><br>
@@ -234,167 +360,246 @@
                 </p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-lg">
-                <!-- Card 1 -->
-                <div
-                    class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm card-hover transition-all duration-300">
-                    <!-- Instagram Header style -->
-                    <div class="flex items-center p-4 border-b border-outline-variant/50">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                            <img src="images/NIRFAMA_logo.png" alt="Logo">
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-sm text-on-surface">nirfama.digitama</h3>
-                            <p class="text-xs text-on-surface-variant">Sukoharjo, Indonesia</p>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
-                        </div>
-                    </div>
-                    <!-- Image placeholder representing IG Post -->
-                    <a href="https://www.instagram.com/p/DQoLyUxk09J" target="_blank"
-                        class="relative block aspect-square bg-surface-container overflow-hidden group">
-                        <img src="images/content_supp.webp" alt="content_support"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0">
-                        <!-- Hover Overlay -->
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                                class="bi bi-instagram mb-3" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                            </svg>
-                            <span class="tracking-wide mt-2">Selengkapnya...</span>
-                            <span class="font-bold opacity-90">@nirfama.digitama</span>
-                        </div>
-                    </a>
-                    <!-- Instagram Footer/Caption style -->
-                    <div class="p-4">
-                        <div class="flex gap-4 mb-3">
-                            <span class="material-symbols-outlined hover:text-error cursor-pointer transition-colors"
-                                style="font-variation-settings: 'FILL' 0;">favorite</span>
-                            <span
-                                class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">chat_bubble</span>
-                            <span
-                                class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">send</span>
-                            <span
-                                class="material-symbols-outlined ml-auto cursor-pointer hover:text-primary transition-colors">bookmark</span>
-                        </div>
-                        <p class="text-sm text-on-surface font-bold mb-1">900 likes</p>
-                        <p class="text-sm text-on-surface-variant line-clamp-3">
-                            <span class="font-bold text-on-surface mr-1">nirfama.digitama</span> PT Niroga Farma
-                            Digitama sedang membuka kesempatan untuk kamu yang kreatif dan penuh semangat di dunia
-                            digital marketing. Kami mencari:
+            <!-- Job Cards Slider Wrapper -->
+            <div class="relative px-1">
+                <!-- Navigation Buttons -->
+                <button id="career-slide-left" aria-label="Previous"
+                    class="absolute -left-2 md:-left-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 dark:bg-surface-container-high/90 text-primary shadow-lg border border-outline-variant/40 flex items-center justify-center hover:bg-primary hover:text-white transition-all hover:scale-110 active:scale-95">
+                    <span class="material-symbols-outlined text-2xl">chevron_left</span>
+                </button>
+                <button id="career-slide-right" aria-label="Next"
+                    class="absolute -right-2 md:-right-5 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/90 dark:bg-surface-container-high/90 text-primary shadow-lg border border-outline-variant/40 flex items-center justify-center hover:bg-primary hover:text-white transition-all hover:scale-110 active:scale-95">
+                    <span class="material-symbols-outlined text-2xl">chevron_right</span>
+                </button>
 
-                            Content Support — kreatif, detail, dan siap belajar hal baru di dunia konten.!
-                        </p>
-                    </div>
-                </div>
+                <!-- Cards Slider Container -->
+                <div id="career-cards-slider"
+                    class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-1 no-scrollbar scrollbar-hide">
 
-                <!-- Card 2 -->
-                <div
-                    class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm card-hover transition-all duration-300">
-                    <div class="flex items-center p-4 border-b border-outline-variant/50">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                            <img src="images/NIRFAMA_logo.png" alt="Logo">
+                    <!-- Card 1 (Paling Kiri: Lowongan MagangHub) -->
+                    <div
+                        class="w-[85vw] sm:w-[320px] md:w-[360px] shrink-0 snap-start bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm card-hover transition-all duration-300">
+                        <!-- Instagram Header style -->
+                        <div class="flex items-center p-4 border-b border-outline-variant/50">
+                            <div
+                                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                <img src="images/NIRFAMA_logo.png" alt="Logo">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-on-surface">nirfama.digitama</h3>
+                                <p class="text-xs text-on-surface-variant">Sukoharjo, Indonesia</p>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                            </div>
                         </div>
-                        <div>
-                            <h3 class="font-bold text-sm text-on-surface">nirfama.digitama</h3>
-                            <p class="text-xs text-on-surface-variant">Sukoharjo, Indonesia</p>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                        <!-- Image placeholder representing IG Post -->
+                        <a href="https://www.instagram.com/p/DcfnxUWOQRz/?utm_source=ig_web_copy_link&igsi=MzRlODBiNWFlZA=="
+                            target="_blank"
+                            class="relative block aspect-square bg-surface-container overflow-hidden group">
+                            <img src="images/MAGANGHUB BATCH 2 2026.avif" alt="lowongan_maganghub"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0">
+                            <!-- Hover Overlay -->
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                    class="bi bi-instagram mb-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                                <span class="tracking-wide mt-2">Selengkapnya...</span>
+                                <span class="font-bold opacity-90">@nirfama.digitama</span>
+                            </div>
+                        </a>
+                        <div class="p-4">
+                            <div class="flex gap-4 mb-3">
+                                <span
+                                    class="material-symbols-outlined hover:text-error cursor-pointer transition-colors"
+                                    style="font-variation-settings: 'FILL' 0;">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">chat_bubble</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">send</span>
+                                <span
+                                    class="material-symbols-outlined ml-auto cursor-pointer hover:text-primary transition-colors">bookmark</span>
+                            </div>
+                            <p class="text-sm text-on-surface font-bold mb-1">298 likes</p>
+                            <p class="text-sm text-on-surface-variant line-clamp-3">
+                                <span class="font-bold text-on-surface mr-1">nirfama.digitama</span><b>🚀 OPEN
+                                    PENDAFTARAN
+                                    MAGANGHUB BATCH 2 TAHUN 2026! 🚀</b> Saatnya kamu bergabung & kembangkan potensimu
+                                di dunia industri digital bersama
+                                NIRFAMA!
+                                💙💛
+                            </p>
                         </div>
                     </div>
-                    <a href="https://www.instagram.com/p/DQoLyUxk09J" target="_blank"
-                        class="relative block aspect-square bg-surface-container overflow-hidden group">
-                        <img src="images/hl_talent.webp" alt="hl_talent"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0">
-                        <!-- Hover Overlay -->
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                                class="bi bi-instagram mb-3" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                            </svg>
-                            <span class="tracking-wide mt-2">Selengkapnya...</span>
-                            <span class="font-bold opacity-90">@nirfama.digitama</span>
-                        </div>
-                    </a>
-                    <div class="p-4">
-                        <div class="flex gap-4 mb-3">
-                            <span class="material-symbols-outlined hover:text-error cursor-pointer transition-colors"
-                                style="font-variation-settings: 'FILL' 0;">favorite</span>
-                            <span
-                                class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">chat_bubble</span>
-                            <span
-                                class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">send</span>
-                            <span
-                                class="material-symbols-outlined ml-auto cursor-pointer hover:text-primary transition-colors">bookmark</span>
-                        </div>
-                        <p class="text-sm text-on-surface font-bold mb-1">900 likes</p>
-                        <p class="text-sm text-on-surface-variant line-clamp-3">
-                            <span class="font-bold text-on-surface mr-1">nirfama.digitama</span><b> Host Live & Talent
-                                —</b>
-                            percaya diri di depan kamera, komunikatif, dan aktif mengikuti tren.
 
-                            Bergabunglah bersama tim yang dinamis dan lingkungan kerja yang seru, di mana ide-ide kamu
-                            bisa berkembang tanpa batas.
-                        </p>
-                    </div>
-                </div>
+                    <!-- Card 2 (Content Support) -->
+                    <div
+                        class="w-[85vw] sm:w-[320px] md:w-[360px] shrink-0 snap-start bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm card-hover transition-all duration-300">
+                        <div class="flex items-center p-4 border-b border-outline-variant/50">
+                            <div
+                                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                <img src="images/NIRFAMA_logo.png" alt="Logo">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-on-surface">nirfama.digitama</h3>
+                                <p class="text-xs text-on-surface-variant">Sukoharjo, Indonesia</p>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/p/DQoLyUxk09J" target="_blank"
+                            class="relative block aspect-square bg-surface-container overflow-hidden group">
+                            <img src="images/content_supp.webp" alt="content_support"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                    class="bi bi-instagram mb-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                                <span class="tracking-wide mt-2">Selengkapnya...</span>
+                                <span class="font-bold opacity-90">@nirfama.digitama</span>
+                            </div>
+                        </a>
+                        <div class="p-4">
+                            <div class="flex gap-4 mb-3">
+                                <span
+                                    class="material-symbols-outlined hover:text-error cursor-pointer transition-colors"
+                                    style="font-variation-settings: 'FILL' 0;">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">chat_bubble</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">send</span>
+                                <span
+                                    class="material-symbols-outlined ml-auto cursor-pointer hover:text-primary transition-colors">bookmark</span>
+                            </div>
+                            <p class="text-sm text-on-surface font-bold mb-1">322 likes</p>
+                            <p class="text-sm text-on-surface-variant line-clamp-3">
+                                <span class="font-bold text-on-surface mr-1">nirfama.digitama</span> PT Niroga Farma
+                                Digitama sedang membuka kesempatan untuk kamu yang kreatif dan penuh semangat di dunia
+                                digital marketing. Kami mencari:
 
-                <!-- Card 3 -->
-                <div
-                    class="bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm card-hover transition-all duration-300">
-                    <div class="flex items-center p-4 border-b border-outline-variant/50">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
-                            <img src="images/NIRFAMA_logo.png" alt="Logo">
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-sm text-on-surface">nirfama.digitama</h3>
-                            <p class="text-xs text-on-surface-variant">Sukoharjo, Indonesia</p>
-                        </div>
-                        <div class="ml-auto">
-                            <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                                Content Support — kreatif, detail, dan siap belajar hal baru di dunia konten.!
+                            </p>
                         </div>
                     </div>
-                    <a href="https://www.instagram.com/stories/highlights/18084307822866907/" target="_blank"
-                        class="relative block aspect-square bg-surface-container overflow-hidden group">
-                        <img src="images/freelance.jpg" alt="freelance"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0">
-                        <!-- Hover Overlay -->
-                        <div
-                            class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
-                                class="bi bi-instagram mb-3" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                            </svg>
-                            <span class="tracking-wide mt-2">Selengkapnya...</span>
-                            <span class="font-bold opacity-90">@nirfama.digitama</span>
+
+                    <!-- Card 3 (Host Live & Talent) -->
+                    <div
+                        class="w-[85vw] sm:w-[320px] md:w-[360px] shrink-0 snap-start bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm card-hover transition-all duration-300">
+                        <div class="flex items-center p-4 border-b border-outline-variant/50">
+                            <div
+                                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                <img src="images/NIRFAMA_logo.png" alt="Logo">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-on-surface">nirfama.digitama</h3>
+                                <p class="text-xs text-on-surface-variant">Sukoharjo, Indonesia</p>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                            </div>
                         </div>
-                    </a>
-                    <div class="p-4">
-                        <div class="flex gap-4 mb-3">
-                            <span class="material-symbols-outlined hover:text-error cursor-pointer transition-colors"
-                                style="font-variation-settings: 'FILL' 0;">favorite</span>
-                            <span
-                                class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">chat_bubble</span>
-                            <span
-                                class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">send</span>
-                            <span
-                                class="material-symbols-outlined ml-auto cursor-pointer hover:text-primary transition-colors">bookmark</span>
+                        <a href="https://www.instagram.com/p/DQoLyUxk09J" target="_blank"
+                            class="relative block aspect-square bg-surface-container overflow-hidden group">
+                            <img src="images/hl_talent.webp" alt="hl_talent"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                    class="bi bi-instagram mb-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                                <span class="tracking-wide mt-2">Selengkapnya...</span>
+                                <span class="font-bold opacity-90">@nirfama.digitama</span>
+                            </div>
+                        </a>
+                        <div class="p-4">
+                            <div class="flex gap-4 mb-3">
+                                <span
+                                    class="material-symbols-outlined hover:text-error cursor-pointer transition-colors"
+                                    style="font-variation-settings: 'FILL' 0;">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">chat_bubble</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">send</span>
+                                <span
+                                    class="material-symbols-outlined ml-auto cursor-pointer hover:text-primary transition-colors">bookmark</span>
+                            </div>
+                            <p class="text-sm text-on-surface font-bold mb-1">236 likes</p>
+                            <p class="text-sm text-on-surface-variant line-clamp-3">
+                                <span class="font-bold text-on-surface mr-1">nirfama.digitama</span><b> Host Live &
+                                    Talent
+                                    —</b>
+                                percaya diri di depan kamera, komunikatif, dan aktif mengikuti tren.
+
+                                Bergabunglah bersama tim yang dinamis dan lingkungan kerja yang seru, di mana ide-ide
+                                kamu
+                                bisa berkembang tanpa batas.
+                            </p>
                         </div>
-                        <p class="text-sm text-on-surface font-bold mb-1">900 likes</p>
-                        <p class="text-sm text-on-surface-variant line-clamp-3">
-                            <span class="font-bold text-on-surface mr-1">nirfama.digitama</span> Kami membuka lowongan
-                            untuk
-                            <b>Freelance</b> Kirimkan CV kamu dan jadilah bagian dari tim
-                            sukses kami.
-                        </p>
                     </div>
+
+                    <!-- Card 4 (Freelance) -->
+                    <div
+                        class="w-[85vw] sm:w-[320px] md:w-[360px] shrink-0 snap-start bg-surface-container-lowest border border-outline-variant rounded-2xl overflow-hidden shadow-sm card-hover transition-all duration-300">
+                        <div class="flex items-center p-4 border-b border-outline-variant/50">
+                            <div
+                                class="w-10 h-10 rounded-full flex items-center justify-center text-white font-bold mr-3">
+                                <img src="images/NIRFAMA_logo.png" alt="Logo">
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-sm text-on-surface">nirfama.digitama</h3>
+                                <p class="text-xs text-on-surface-variant">Sukoharjo, Indonesia</p>
+                            </div>
+                            <div class="ml-auto">
+                                <span class="material-symbols-outlined text-on-surface-variant">more_horiz</span>
+                            </div>
+                        </div>
+                        <a href="https://www.instagram.com/stories/highlights/18084307822866907/" target="_blank"
+                            class="relative block aspect-square bg-surface-container overflow-hidden group">
+                            <img src="images/freelance.jpg" alt="freelance"
+                                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 z-0">
+                            <div
+                                class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center text-white z-10">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+                                    class="bi bi-instagram mb-3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.036 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                </svg>
+                                <span class="tracking-wide mt-2">Selengkapnya...</span>
+                                <span class="font-bold opacity-90">@nirfama.digitama</span>
+                            </div>
+                        </a>
+                        <div class="p-4">
+                            <div class="flex gap-4 mb-3">
+                                <span
+                                    class="material-symbols-outlined hover:text-error cursor-pointer transition-colors"
+                                    style="font-variation-settings: 'FILL' 0;">favorite</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">chat_bubble</span>
+                                <span
+                                    class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">send</span>
+                                <span
+                                    class="material-symbols-outlined ml-auto cursor-pointer hover:text-primary transition-colors">bookmark</span>
+                            </div>
+                            <p class="text-sm text-on-surface font-bold mb-1">227 likes</p>
+                            <p class="text-sm text-on-surface-variant line-clamp-3">
+                                <span class="font-bold text-on-surface mr-1">nirfama.digitama</span> Kami membuka
+                                lowongan
+                                untuk
+                                <b>Freelance</b> Kirimkan CV kamu dan jadilah bagian dari tim
+                                sukses kami.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -438,6 +643,20 @@
         if (mobileMenuBtn && mobileMenu) {
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Career cards slider navigation
+        const slider = document.getElementById('career-cards-slider');
+        const btnLeft = document.getElementById('career-slide-left');
+        const btnRight = document.getElementById('career-slide-right');
+
+        if (slider && btnLeft && btnRight) {
+            btnLeft.addEventListener('click', () => {
+                slider.scrollBy({ left: -370, behavior: 'smooth' });
+            });
+            btnRight.addEventListener('click', () => {
+                slider.scrollBy({ left: 370, behavior: 'smooth' });
             });
         }
     </script>
